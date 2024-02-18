@@ -25,6 +25,6 @@ export const connectToDatabase = async () => {
     cached.conn = await cached.promise;
     return cached.conn;
   } catch (error) {
-    throw new Error("mongodb connect error")
+    throw new Error(`mongodb connect error : ${MONGODB_URL}`)
   }
 }
